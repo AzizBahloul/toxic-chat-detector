@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  toxic-chat-detector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: toxic-chat-detector:latest
+    container_name: toxic-chat-detector
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount models directory to persist trained models
+      - ./bad_word_detector/data/models:/app/bad_word_detector/data/models
+      # Mount logs directory for persistent logs
+      - ./bad_word_detector/logs:/app/bad_word_detector/logs
+    environment:
+      - USE_GPU=true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

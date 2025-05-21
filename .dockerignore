@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+venv/
+ENV/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data directories (mount as volumes instead)
+data/
+
+# Logs
+*.log
+bad_word_detector/logs/
+
+# Development and testing
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# IDE
+.vscode/
+.idea/

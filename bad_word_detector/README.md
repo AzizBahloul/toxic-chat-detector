@@ -194,4 +194,4 @@ pytest tests/
 
 ## Disclaimer
 
-This tool is designed to detect potentially offensive content, but it's not perfect and may produce false positives or miss some toxic content. It should be used as part of a broader content moderation strategy. wo catage il 7ouma wo 3asba li roma
+This tool is designed to detect potentially offensive content, but it's not perfect and may produce false positives or miss some toxic content. It should be used as part of a broader content moderation strategy.  

@@ -1,0 +1,26 @@
+# Setup the environment
+python bad_word_detector/scripts/setup.py
+
+# Train with multiple datasets and full sample size
+python bad_word_detector/scripts/enhanced_training.py --combine_datasets --full_bert
+python bad_word_detector/scripts/enhanced_training.py --combine_datasets --full_bert --epochs 4
+
+ 
+
+# Start the API server
+uvicorn bad_word_detector.api.main:app --host 0.0.0.0 --port 8000 --reload
+
+
+ 
+
+il body request:
+http://localhost:8000/detect:
+
+
+{
+  "text": "Hello, how are you today? I hope you're having a wonderful day!"
+}
+
+{
+  "text": "you jews nigga "
+}
