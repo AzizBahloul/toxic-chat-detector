@@ -7,12 +7,12 @@ This script installs all required dependencies and downloads necessary models.
 import sys
 import subprocess
 from pathlib import Path
-from utils.config import Config
 
 # Ensure the project root (bad_word_detector directory) is added to sys.path
 project_root = Path(__file__).parent.parent.absolute()
 sys.path.insert(0, str(project_root))  # Now modules in utils/ can be imported
 
+from utils.config import Config
 
 
 
