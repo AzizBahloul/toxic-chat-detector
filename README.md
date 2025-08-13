@@ -377,7 +377,6 @@ This tool is designed to detect potentially offensive content for content modera
 ---
 
 <div align="center">
-  <strong>Made with ❤️ by Mohamed Aziz Bahloul</strong>
   <br>
   <sub>⭐ Star this repository if it helped you!</sub>
 </div>
